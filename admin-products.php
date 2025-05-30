@@ -71,7 +71,9 @@ $app->post("/admin/products/:idproduct", function($idproduct){
 
 	$product->save();
 
-	$product->setPhoto($_FILES["file"]);
+	if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+		$product->setPhoto($_FILES["file"]);
+	}
 
 	header("Location: /admin/products");
 	exit;
