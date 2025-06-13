@@ -8,6 +8,7 @@ use \Hcode\PageAdmin;
 use \Hcode\Model\User;
 use \Hcode\Model\Category;
 use \Hcode\Model\Product;
+use \Hcode\Model\Cart;
 
 $app = new Slim();
 
